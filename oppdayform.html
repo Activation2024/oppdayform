@@ -1,0 +1,126 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>แจ้งไซส์เสื้อ Opportunity Day</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+      <div class="loginbackground box-background--white padding-top--64">
+        <div>
+          <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+            </div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+            <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+            <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+            <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+            <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+            <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+            <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+          </div>
+          <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+            <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+          </div>
+        </div>
+      </div>
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+          <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a rel="dofollow">ฟอร์มแจ้งไซส์เสื้อ</a></h1>
+        </div>
+        <div class="box-root padding-top--4 padding-bottom--4 flex-flex flex-justifyContent--center">
+          <h2><a rel="dofollow">โครงการ Every Day is Opportunity</a></h2>
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">ระบุรายละเอียดให้ครบถ้วน</span>
+              <form id="stripe-login" method="post" name="myForm">
+
+                <div class="field padding-bottom--24">
+                  <label for="code">รหัสประจำตัว 8 หลัก</label>
+                  <input type="text" name="code" placeholder="กรุณาระบุรหัสประจำตัว 8 หลัก" required>
+                </div>
+
+                <div class="field padding-bottom--24">
+                    <label for="name">ชื่อ-สกุล</label>
+                    <input type="text" id="name" name="name" placeholder="กรุณาระบุชื่อ-สกุล" required>
+                  </div>
+
+                <div class="field padding-bottom--24">
+                  <label for="mobile">เบอร์โทรศัพท์</label>
+                  <input type="text" id="mobile" name="mobile" placeholder="08-xxxx-xxxx" required>
+                </div>
+
+                <div class="field padding-bottom--24">
+                  <label for="address">ที่อยู่ในการจัดส่ง</label>
+                  <input type="text" id="address" name="address" placeholder="กรุณาระบุที่อยู่ในการจัดส่ง" required>
+                </div>
+                  
+                <div class="field padding-bottom--24">
+                  <label for="size">ไซส์เสื้อ</label>
+                  <label for="size">S   = รอบอก 40</label>
+                  <label for="size">M   = รอบอก 42</label>
+                  <label for="size">L   = รอบอก 44</label>
+                  <label for="size">XL  = รอบอก 46</label>
+                  <label for="size">2XL = รอบอก 48</label>
+                  <input type="text" id="size" name="size" placeholder="กรุณาระบุไซส์เสื้อที่ต้องการ" required>
+                </div>
+
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="submit" value="บันทึกข้อมูล">
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24">
+
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+              <span><a href="https://www.thailife.com">©Thai Life</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyS_tiS-yghW0fO8tiPwOncdUeHuxYN8E93pGC8epWs8ThQtmROL4LGq1xkNoqJLPlh9g/exec' 
+    const form = document.forms['myForm']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'บันทึกข้อมูลเรียบร้อย',
+  showConfirmButton: false,
+  timer: 1500
+}))
+        .catch(error => console.error('Error!', error.message))
+        .catch.contact-form.reset();
+    })
+  </script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
